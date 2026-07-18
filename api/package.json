@@ -1,0 +1,14 @@
+{
+  "name": "cleanindia-connect-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for CleanIndia Connect",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/cosmos": "^4.0.0"
+  },
+  "devDependencies": {}
+}

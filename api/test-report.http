@@ -1,0 +1,37 @@
+### GET all reports
+GET http://localhost:7073/api/reports
+
+
+### POST create a valid report
+POST http://localhost:7073/api/reports
+Content-Type: application/json
+
+{
+  "title": "Garbage dump near public road",
+  "description": "A large amount of garbage has been dumped near the main road and is causing bad smell in the area.",
+  "location": "Bikaner, Rajasthan",
+  "type": "Garbage Dump",
+  "urgency": "High",
+  "citizenName": "Anonymous Citizen",
+  "imageUrl": ""
+}
+
+
+### PATCH update report status
+### Replace REPORT_ID_HERE with a real report id from GET /api/reports or POST /api/reports.
+PATCH http://localhost:7073/api/reports/report-c1e758b1-c0bd-44bb-b4fe-df18f1a5d8d5/status
+Content-Type: application/json
+
+{
+  "status": "In Progress"
+}
+
+
+### POST add a comment to a report
+### Replace REPORT_ID_HERE with a real report id from GET /api/reports or POST /api/reports.
+POST http://localhost:7073/api/reports/REPORT_ID_HERE/comments
+Content-Type: application/json
+
+{
+  "text": "This area needs a covered dustbin and regular waste collection."
+}
